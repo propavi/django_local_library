@@ -150,7 +150,7 @@ class AuthorDelete(PermissionRequiredMixin, DeleteView):
 
 class AllBorrowedBooksListView(PermissionRequiredMixin, generic.ListView):
     model = BookInstance
-    template_name = 'catalog/bookinstance_list_borrowed_all.html'
+    template_name = 'catalog/bookinstance_list_borrowed_user.html'
     permission_required = 'catalog.can_mark_returned'
     paginate_by = 10
 
